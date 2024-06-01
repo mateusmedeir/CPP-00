@@ -14,27 +14,27 @@ void    PhoneBook::add() {
     input.clear();
     std::cout << "First name: ";
     std::getline(std::cin, input);
-    this->_contacts[this->_index % 8].set_first_name(input);
+    this->_contacts[this->_index % 8].setFirstName(input);
 
     input.clear();
     std::cout << "Last name: ";
     std::getline(std::cin, input);
-    this->_contacts[this->_index % 8].set_last_name(input);
+    this->_contacts[this->_index % 8].setLastName(input);
 
     input.clear();
     std::cout << "Nickname: ";
     std::getline(std::cin, input);
-    this->_contacts[this->_index % 8].set_nickname(input);
+    this->_contacts[this->_index % 8].setNickname(input);
 
     input.clear();
     std::cout << "Phone number: ";
     std::getline(std::cin, input);
-    this->_contacts[this->_index % 8].set_phone_number(input);
+    this->_contacts[this->_index % 8].setPhoneNumber(input);
 
     input.clear();
     std::cout << "Darkest secret: ";
     std::getline(std::cin, input);
-    this->_contacts[this->_index % 8].set_darkest_secret(input);
+    this->_contacts[this->_index % 8].setDarkestSecret(input);
     
     this->_index++;
     if (this->_size < 8)
@@ -49,24 +49,24 @@ void    PhoneBook::search() {
 
         std::cout << " | ";
 
-        if (this->_contacts[i].get_first_name().length() > 10)
-            std::cout << this->_contacts[i].get_first_name().substr(0, 9) << ".";
+        if (this->_contacts[i].getFirstName().length() > 10)
+            std::cout << this->_contacts[i].getFirstName().substr(0, 9) << ".";
         else
-            std::cout << std::setw(10) << this->_contacts[i].get_first_name();
+            std::cout << std::setw(10) << this->_contacts[i].getFirstName();
         
         std::cout << " | ";
 
-        if (this->_contacts[i].get_last_name().length() > 10)
-            std::cout << this->_contacts[i].get_last_name().substr(0, 9) << ".";
+        if (this->_contacts[i].getLastName().length() > 10)
+            std::cout << this->_contacts[i].getLastName().substr(0, 9) << ".";
         else
-            std::cout << std::setw(10) << this->_contacts[i].get_last_name();
+            std::cout << std::setw(10) << this->_contacts[i].getLastName();
 
         std::cout << " | ";
 
-        if (this->_contacts[i].get_nickname().length() > 10)
-            std::cout << this->_contacts[i].get_nickname().substr(0, 9) << ".";
+        if (this->_contacts[i].getNickname().length() > 10)
+            std::cout << this->_contacts[i].getNickname().substr(0, 9) << ".";
         else
-            std::cout << std::setw(10) << this->_contacts[i].get_nickname();
+            std::cout << std::setw(10) << this->_contacts[i].getNickname();
 
         std::cout << " |" << std::endl;
     }
