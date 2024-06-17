@@ -14,29 +14,49 @@ void PhoneBook::add()
     std::string input;
 
     input.clear();
-    std::cout << "First name: ";
-    std::getline(std::cin, input);
-    this->_contacts[this->_index % 8].setFirstName(input);
+    while (input.empty())
+    {
+        std::cout << "First name: ";
+        std::getline(std::cin, input);
+        if (!input.empty())
+            this->_contacts[this->_index % 8].setFirstName(input);
+    }
 
     input.clear();
-    std::cout << "Last name: ";
-    std::getline(std::cin, input);
-    this->_contacts[this->_index % 8].setLastName(input);
+    while (input.empty())
+    {
+        std::cout << "Last name: ";
+        std::getline(std::cin, input);
+        if (!input.empty())
+            this->_contacts[this->_index % 8].setLastName(input);
+    }
 
     input.clear();
-    std::cout << "Nickname: ";
-    std::getline(std::cin, input);
-    this->_contacts[this->_index % 8].setNickname(input);
+    while (input.empty())
+    {
+        std::cout << "Nickname: ";
+        std::getline(std::cin, input);
+        if (!input.empty())
+            this->_contacts[this->_index % 8].setNickname(input);
+    }
 
     input.clear();
-    std::cout << "Phone number: ";
-    std::getline(std::cin, input);
-    this->_contacts[this->_index % 8].setPhoneNumber(input);
+    while (input.empty())
+    {
+        std::cout << "Phone number: ";
+        std::getline(std::cin, input);
+        if (!input.empty())
+            this->_contacts[this->_index % 8].setPhoneNumber(input);
+    }
 
     input.clear();
-    std::cout << "Darkest secret: ";
-    std::getline(std::cin, input);
-    this->_contacts[this->_index % 8].setDarkestSecret(input);
+    while (input.empty())
+    {
+        std::cout << "Darkest secret: ";
+        std::getline(std::cin, input);
+        if (!input.empty())
+            this->_contacts[this->_index % 8].setDarkestSecret(input);
+    }
 
     this->_index++;
     if (this->_size < 8)
